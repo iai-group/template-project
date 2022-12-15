@@ -15,6 +15,11 @@ Pre-commit hooks
 
   - Flake8
 
+Github actions
+--------------
+
+Details on the Github actions are `here <https://github.com/iai-group/guidelines/blob/main/github/Actions.md>`_.
+
 Installation
 ------------
 
