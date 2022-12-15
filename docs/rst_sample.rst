@@ -1,7 +1,7 @@
 IAI Project Template
-======================
+====================
 
-This is an example of rst document.
+This is an example of a rst document.
 
 Pre-commit hooks
 ----------------
@@ -19,7 +19,7 @@ Installation
 ------------
 
 Create conda environment
-""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Run the following command to install and activate the conda environment:
 
