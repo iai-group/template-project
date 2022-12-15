@@ -33,4 +33,3 @@ Run the following command to install and activate the conda environment:
     conda env update -f environment.yaml
     conda activate template
 
-
