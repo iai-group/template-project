@@ -11,4 +11,4 @@ dependencies:
   - pytest-cov
   - mypy
   - docformatter
-  
+  - pydocstyle=6.1.1

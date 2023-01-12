@@ -3,9 +3,12 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.7
+  - python=3.9
   - black
   - flake8
   - pre-commit
   - pytest
+  - mypy
+  - docformatter
+  - pydocstyle=6.1.1
   
