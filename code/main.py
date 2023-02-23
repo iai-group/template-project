@@ -21,7 +21,6 @@ def main(args: argparse.Namespace) -> None:
     logger.debug(f"Arguments: {args}")
 
 
-# Function to parse arguments from command-line call.
 def parse_args() -> argparse.Namespace:
     """Parse arguments from command-line call."""
     parser = argparse.ArgumentParser()
