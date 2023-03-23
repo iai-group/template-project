@@ -22,7 +22,11 @@ def main(args: argparse.Namespace) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    """Parse arguments from command-line call."""
+    """Parses arguments from command-line call.
+
+    Returns:
+        Arguments from command-line call.
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "-d",
