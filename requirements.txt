@@ -3,5 +3,5 @@ flake8
 pytest
 mypy
 docformatter
-pre-commit
+pre-commit==3.8.0
 pydocstyle==6.1.1
