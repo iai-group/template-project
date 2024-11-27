@@ -87,7 +87,7 @@ In your GitHub Actions workflow, reference the `GIST_SECRET` as follows:
 3. **Create a New Gist:** Click the "New gist" button.
 4. **Add Content:**
    - **Description:** Provide a brief description of your gist.
-   - **Filename:** Enter a filename, `coverage.${{ env.REPO_NAME }}.main.json`
+   - **Filename:** Enter a filename, `coverage.REPO_NAME.main.json` (Replace REPO_NAME with your actual GitHub repo name.)
    - **Content:** Paste the sample coverage data `{"schemaVersion":1,"label":"coverage","message":"36%","color":"red"}`
 5. **Set Visibility:**
    - **Public Gist:** Visible to everyone and searchable.
