@@ -13,12 +13,15 @@ Similarly, Github actions are used to run `flake8`, `black` and `pytest` on ever
 
 # Setting up CI pipeline
 
-# Setting up CI Pipeline
-
 This document provides step-by-step instructions for setting up a Continuous Integration (CI) pipeline, including configuring GitHub Actions and integrating a dynamic Gist badge.
 
 ---
 
+## There are three CI files in this template repository.
+
+1. `python-package-conda.yaml` this file contains the GitHub action workflow which runs every time someone pushes code to the remote branch.
+2. `ci.yaml` this file contains the GitHub action workflow which runs when a pull request is created or updated. With dynamic coverage badge comparing the coverage to the main branch.
+3. `merge.yaml` this file contains the GitHub action workflow which runs when a branch is merged to `main`.
 ## How to Set Up `GIST_SECRET` for GitHub Actions
 
 ### Step 1: Generate a Personal Access Token (PAT)
