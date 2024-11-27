@@ -80,7 +80,7 @@ jobs:
           path: pytest-coverage.txt
           publish-test-results:
   publish-test-results:    
-      name: "Publish TestsResults"
+      name: "Publish Unit Tests Results"
       needs: build-and-test
       runs-on: ubuntu-latest
       if: always()
