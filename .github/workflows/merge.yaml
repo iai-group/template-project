@@ -5,8 +5,8 @@ on:
       - main
 
 jobs:
-  build-and-test:
-    name: "Build and Test Python 3.9"
+  pre-commit-and-test:
+    name: "Pre-commit and Test Python 3.9"
     runs-on: ubuntu-latest
     if: always()
     timeout-minutes: 20
@@ -52,7 +52,7 @@ jobs:
         uses: schneegans/dynamic-badges-action@v1.7.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
-          gistID: 1cc32e6b43d911995bf07adb1cce4e89
+          gistID: ${{ secrets.GIST_ID }}
           filename: badge.json
           label: coverage
           message: ${{ env.COVERAGE }}
@@ -64,6 +64,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/vinaysetty/1cc32e6b43d911995bf07adb1cce4e89/raw/coverage.${{ env.REPO_NAME }}.main.json)
+            ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ github.repository_owner }}/${{ secrets.GIST_ID }}/raw/coverage.${{ env.REPO_NAME }}.main.json)
           edit-mode: replace
           reactions: eyes
