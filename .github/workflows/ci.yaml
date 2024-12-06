@@ -99,11 +99,6 @@ jobs:
             name: unit-test-py39
             path: unit-test-py39
 
-        - name: Publish Unit Test Results
-          uses: EnricoMi/publish-unit-test-result-action@v2
-          with:
-            files: unit-test-py39/*.xml
-
         - name: Download coverage report
           uses: actions/download-artifact@v3
           with:
