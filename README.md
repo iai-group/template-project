@@ -12,7 +12,7 @@ Using `pre-commit` hooks, `flake8`, `black`, `mypy`, `docformatter`, and `pytest
 Similarly, Github actions are used to run `flake8`, `black` and `pytest` on every push and pull request. The `pytest` results are sent to [CodeCov](https://about.codecov.io/) using their API for to get test coverage analysis. Details on Github actions are [here](https://github.com/iai-group/guidelines/blob/main/github/Actions.md).
 
 
-# Setting up CI pipeline
+## Setting up CI pipeline
 
 This document provides step-by-step instructions for setting up a Continuous Integration (CI) pipeline, including configuring GitHub Actions and integrating a dynamic Gist badge.
 
