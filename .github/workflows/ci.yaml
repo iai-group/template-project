@@ -86,7 +86,7 @@ jobs:
           
   publish-test-results:
       name: "Publish Unit Tests Results"
-      needs: build-and-test
+      needs: pre-commit-and-test
       runs-on: ubuntu-latest
       if: always()
       timeout-minutes: 20
