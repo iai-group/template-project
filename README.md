@@ -7,9 +7,9 @@ This repository serves as a template for software projects.
 
 # Testing and GitHub actions
 
-Using `pre-commit` hooks, `flake8`, `black`, `mypy`, `docformatter`, and `pytest` are locally run on every commit. For more details on how to use `pre-commit` hooks see [here](https://github.com/iai-group/guidelines/tree/main/python#install-pre-commit-hooks).
+Using `pre-commit` hooks, `flake8`, `black`, `mypy`, `docformatter`, `pydocstyle` and `pytest` are locally run on every commit. For more details on how to use `pre-commit` hooks see [here](https://github.com/iai-group/guidelines/tree/main/python#install-pre-commit-hooks).
 
-Similarly, Github actions are used to run `flake8`, `black` and `pytest` on every push and pull request. The `pytest` results are sent to [CodeCov](https://about.codecov.io/) using their API for to get test coverage analysis. Details on Github actions are [here](https://github.com/iai-group/guidelines/blob/main/github/Actions.md).
+Similarly, Github actions are used to run `flake8`, `black`, `mypy`, `docformatter`, `pydocstyle` and `pytest` on every push and pull request and merge to main. The `pytest` also runs coverage. GitHub actions are explained in detail [here](https://github.com/iai-group/guidelines/blob/main/github/Actions.md).
 
 
 ## Setting up CI pipeline
@@ -77,7 +77,7 @@ In your GitHub Actions workflow, reference the `GIST_SECRET` as follows:
   uses: schneegans/dynamic-badges-action@v1.7.0
   with:
     auth: ${{ secrets.GIST_SECRET }}
-    gistID: your_gist_id_here
+    gistID: ${{ secrets.GIST_ID }}
     filename: badge.json
     label: coverage
     message: 85%
@@ -114,9 +114,9 @@ The `gist_id` is the unique identifier for your gist.
 To embed the gist in your project's README or other documentation, use the following syntax:
 
 ```
-[![Gist Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/your_username/gist_id/raw/badge.json)](https://gist.github.com/your_username/gist_id)
+[![Gist Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ github.repository_owner }}/${{ secrets.GIST_ID }}/raw/badge.json)](https://gist.github.com/${{ github.repository_owner }}/${{ secrets.GIST_ID }})
 ```
 
-#### Step 7: Update the CI yaml files 
+#### Step 7: Set the `GIST_ID` in secrets
 
 * Replace the gist id in the CI files under `ci.yaml`, `merge.yaml` etc.
