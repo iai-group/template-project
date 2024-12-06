@@ -107,5 +107,7 @@ To embed the gist in your project's README or other documentation, use the follo
 ```
 [![Gist Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/your_username/gist_id/raw/badge.json)](https://gist.github.com/your_username/gist_id)
 ```
-### Step 7: Update the CI yaml files 
+
+#### Step 7: Update the CI yaml files 
+
 * Replace the gist id in the CI files under `ci.yaml`, `merge.yaml` etc.
