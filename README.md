@@ -23,9 +23,11 @@ This document provides step-by-step instructions for setting up a Continuous Int
 1. `python-package-conda.yaml` this file contains the GitHub action workflow which runs every time someone pushes code to the remote branch.
 2. `ci.yaml` this file contains the GitHub action workflow which runs when a pull request is created or updated. With dynamic coverage badge comparing the coverage to the main branch.
 3. `merge.yaml` this file contains the GitHub action workflow which runs when a branch is merged to `main`.
-## How to Set Up `GIST_SECRET` for GitHub Actions
 
-### Step 1: Generate a Personal Access Token (PAT)
+### How to Set Up `GIST_SECRET` for GitHub Actions
+
+#### Step 1: Generate a Personal Access Token (PAT)
+
 1. **Sign In to GitHub:**
    - Log in to your [GitHub account](https://github.com/).
 
@@ -47,7 +49,8 @@ This document provides step-by-step instructions for setting up a Continuous Int
 
 ---
 
-### Step 2: Add `GIST_SECRET` to Your Repository
+#### Step 2: Add `GIST_SECRET` to Your Repository
+
 1. **Open Repository Settings:**
    - Navigate to the repository where you want to use the Gist.
 
@@ -65,7 +68,8 @@ This document provides step-by-step instructions for setting up a Continuous Int
 
 ---
 
-### Step 3: Use `GIST_SECRET` in Your Workflow
+#### Step 3: Use `GIST_SECRET` in Your Workflow
+
 In your GitHub Actions workflow, reference the `GIST_SECRET` as follows:
 
 ```yaml
@@ -79,9 +83,11 @@ In your GitHub Actions workflow, reference the `GIST_SECRET` as follows:
     message: 85%
     color: green
 ```
+
 ---
 
-### Step 4: Create a GitHub Gist
+#### Step 4: Create a GitHub Gist
+
 1. **Sign In:** Log in to your [GitHub account](https://github.com/).
 2. **Navigate to Gists:** Click on your profile picture in the top-right corner and select "Your gists" from the dropdown menu.
 3. **Create a New Gist:** Click the "New gist" button.
@@ -94,14 +100,17 @@ In your GitHub Actions workflow, reference the `GIST_SECRET` as follows:
    - **Secret Gist:** Not listed publicly but accessible via URL.
 6. **Create Gist:** Click "Create public gist" or "Create secret gist" based on your preference.
 
-### Step 5: Retrieve the Gist ID
+#### Step 5: Retrieve the Gist ID
+
 After creating the gist, you'll be redirected to its page. The URL will look like this:
 `https://gist.github.com/your_username/gist_id`
 
 The `gist_id` is the unique identifier for your gist.
 
-### Step 6: Integrate the Gist into Your Project
-#### Markdown Embed
+#### Step 6: Integrate the Gist into Your Project
+
+##### Markdown Embed
+
 To embed the gist in your project's README or other documentation, use the following syntax:
 
 ```
