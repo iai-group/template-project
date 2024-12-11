@@ -10,7 +10,7 @@ This document provides step-by-step instructions for setting up a Continuous Int
 2. `ci.yaml` this file contains the GitHub action workflow which runs when a pull request is created or updated. With dynamic coverage badge comparing the coverage to the main branch.
 3. `merge.yaml` this file contains the GitHub action workflow which runs when a branch is merged to `main`.
 
-### How to Set Up `GIST_SECRET` for GitHub Actions
+### How to Set Up `GIST_SECRET` and `GIST_ID`for GitHub Actions
 
 #### Step 1: Generate a Personal Access Token (PAT)
 
@@ -32,9 +32,10 @@ This document provides step-by-step instructions for setting up a Continuous Int
 5. **Generate the Token:**
    - Click **Generate token**.
    - Copy the token displayed on the screen. (You won’t be able to see it again, so save it securely.)
+   - Note down the gist id from the URL which will be in the form of `https://gist.github.com/{user}/{GIST_ID}`
 
 
-#### Step 2: Add `GIST_SECRET` to Your Repository
+#### Step 2: Add `GIST_SECRET` and `GIST_ID` as secrets to Your Repository
 
 1. **Open Repository Settings:**
    - Navigate to the repository where you want to use the Gist.
@@ -50,7 +51,26 @@ This document provides step-by-step instructions for setting up a Continuous Int
 
 4. **Save the Secret:**
    - Click **Add secret** to save.
+  
+5. **Repeat steps 1-4 for `GIST_ID`** 
 
+
+#### Step 3: Add `GIST_OWNER` as an env variable
+
+   1. **Open Repository Settings:**
+      - Navigate to the repository where you want to use the Gist.
+  
+   2. **Create new Environment:**
+      - In the repository, click **Settings**.
+      - Select **Environments**.
+      - Click **New Environment**
+      - Give it a name and click **Configure environment**
+  
+   3. **Add environment variables**
+      - Click **Add environment variable**
+      - Set the **Name** as `GIST_OWNER`.
+      - Set your username or gist owners username as **Value**
+      - Click **Add variable**
 
 #### Step 3: Use `GIST_SECRET` in Your Workflow
 
@@ -96,7 +116,7 @@ The `gist_id` is the unique identifier for your gist.
 To embed the gist in your project's README or other documentation, use the following syntax:
 
 ```
-[![Gist Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ github.repository_owner }}/${{ secrets.GIST_ID }}/raw/badge.json)](https://gist.github.com/${{ github.repository_owner }}/${{ secrets.GIST_ID }})
+[![Gist Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ env.GIST_OWNER }}/${{ secrets.GIST_ID }}/raw/badge.json)](https://gist.github.com/${{ env.GIST_OWNER }}/${{ secrets.GIST_ID }})
 ```
 
 #### Step 7: Set the `GIST_ID` in secrets
