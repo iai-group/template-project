@@ -157,6 +157,6 @@ jobs:
             body: |
               Current Branch | Main Branch |
               | ------ | ------ |
-              ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ github.repository_owner }}/${{ secrets.GIST_ID }}/raw/coverage.${{ env.REPO_NAME }}.${{ github.event.number }}.json) | ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ github.repository_owner }}/${{ secrets.GIST_ID }}/raw/coverage.${{ env.REPO_NAME }}.main.json) |
+              ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ env.GIST_OWNER }}/${{ secrets.GIST_ID }}/raw/coverage.${{ env.REPO_NAME }}.${{ github.event.number }}.json) | ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ github.repository_owner }}/${{ secrets.GIST_ID }}/raw/coverage.${{ env.REPO_NAME }}.main.json) |
             edit-mode: replace
 

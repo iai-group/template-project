@@ -40,7 +40,7 @@ repos:
         entry: mypy
         language: python
         types: [python]
-        exclude: ^(tests|data|output|docs)/
+        exclude: ^(tests|data|docs)/
         args:
           - --no-strict-optional
           - --ignore-missing-imports

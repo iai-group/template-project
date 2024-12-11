@@ -64,6 +64,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ github.repository_owner }}/${{ secrets.GIST_ID }}/raw/coverage.${{ env.REPO_NAME }}.main.json)
+            ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/${{ env.GIST_OWNER }}/${{ secrets.GIST_ID }}/raw/coverage.${{ env.REPO_NAME }}.main.json)
           edit-mode: replace
           reactions: eyes

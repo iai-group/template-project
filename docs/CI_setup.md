@@ -1,5 +1,4 @@
-
-## Setting up CI pipeline
+# Setting up CI pipeline
 
 This document provides step-by-step instructions for setting up a Continuous Integration (CI) pipeline, including configuring GitHub Actions and integrating a dynamic Gist badge.
 
@@ -34,7 +33,6 @@ This document provides step-by-step instructions for setting up a Continuous Int
    - Click **Generate token**.
    - Copy the token displayed on the screen. (You won’t be able to see it again, so save it securely.)
 
----
 
 #### Step 2: Add `GIST_SECRET` to Your Repository
 
@@ -53,7 +51,6 @@ This document provides step-by-step instructions for setting up a Continuous Int
 4. **Save the Secret:**
    - Click **Add secret** to save.
 
----
 
 #### Step 3: Use `GIST_SECRET` in Your Workflow
 
@@ -71,7 +68,6 @@ In your GitHub Actions workflow, reference the `GIST_SECRET` as follows:
     color: green
 ```
 
----
 
 #### Step 4: Create a GitHub Gist
 
@@ -96,7 +92,6 @@ The `gist_id` is the unique identifier for your gist.
 
 #### Step 6: Integrate the Gist into Your Project
 
-##### Markdown Embed
 
 To embed the gist in your project's README or other documentation, use the following syntax:
 
